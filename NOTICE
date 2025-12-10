@@ -1,0 +1,34 @@
+LegLab
+Copyright (c) 2024 Minh
+
+This project is released under the MIT License (see LICENSE).
+
+It builds on and includes third-party components that remain under their own
+licenses. The following acknowledgments apply:
+
+1. NVIDIA Isaac Lab
+   ----------------
+   LegLab is structured as an Isaac Lab extension and reuses code derived from
+   the Isaac Lab project and its extension template. Such files retain their
+   original copyright and BSD-3-Clause license headers:
+
+       Copyright (c) 2022-2025, The Isaac Lab Project Developers.
+       SPDX-License-Identifier: BSD-3-Clause
+
+   Project: https://github.com/isaac-sim/IsaacLab
+
+2. legged_gym (ETH Zurich, Robotic Systems Lab)
+   --------------------------------------------
+   The locomotion velocity-tracking task design is based on the environments
+   introduced by Rudin et al.
+
+       Reference: https://github.com/leggedrobotics/legged_gym
+
+3. Unitree G1 robot model
+   ----------------------
+   The G1 robot description (URDF, meshes, and the converted USD asset under
+   source/leglab/leglab/robots/G1/) is based on the Unitree Robotics G1
+   humanoid model and is used here for simulation purposes only. All rights to
+   the original robot model remain with Unitree Robotics.
+
+       Vendor: https://www.unitree.com/
