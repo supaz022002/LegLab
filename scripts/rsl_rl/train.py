@@ -53,6 +53,7 @@ import platform
 from packaging import version
 
 # for distributed training, check minimum supported rsl-rl version
+# (aligned with Isaac Lab 2.2 / Isaac Sim 4.5 releases)
 RSL_RL_VERSION = "2.3.1"
 installed_version = metadata.version("rsl-rl-lib")
 if args_cli.distributed and version.parse(installed_version) < version.parse(RSL_RL_VERSION):
