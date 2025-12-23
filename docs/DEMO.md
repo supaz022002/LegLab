@@ -50,7 +50,14 @@ After training, fill in the [Results](../README.md#results) table with:
 |-------|------------------|
 | Iterations | Last checkpoint step in the log directory name or TensorBoard |
 | Final mean reward | TensorBoard scalar `Train/mean_reward` |
-| Demo GIF | `docs/assets/demo.gif` (add to README hero section) |
+| Demo GIF | `docs/assets/demo.gif` (record from `play.py --video`, or regenerate schematic via `generate_results_assets.py`) |
+| Training curves | Export from TensorBoard, or run `python scripts/generate_results_assets.py` as a plotting template |
+
+Regenerate README figures (schematic demo + example curves):
+
+```bash
+python scripts/generate_results_assets.py
+```
 
 Example README hero update:
 

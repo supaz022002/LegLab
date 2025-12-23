@@ -1,0 +1,18 @@
+{
+  "task": "LegLab-G1-Flat",
+  "algorithm": "PPO (RSL-RL)",
+  "num_envs": 4096,
+  "max_iterations": 5000,
+  "episode_length_s": 20.0,
+  "final_mean_reward": 31.19,
+  "best_mean_reward": 32.89,
+  "best_iteration": 4141,
+  "final_episode_length_s": 19.91,
+  "final_lin_vel_rmse_mps": 0.092,
+  "final_ang_vel_rmse_radps": 0.14,
+  "command_lin_vel_x_range_mps": [
+    0.0,
+    0.6
+  ],
+  "hardware_note": "Single NVIDIA RTX 4090, Isaac Sim 4.5 / Isaac Lab 2.2"
+}

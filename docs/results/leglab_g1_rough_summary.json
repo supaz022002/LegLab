@@ -1,0 +1,13 @@
+{
+  "task": "LegLab-G1-Rough",
+  "algorithm": "PPO (RSL-RL)",
+  "num_envs": 4096,
+  "max_iterations": 3000,
+  "episode_length_s": 40.0,
+  "final_mean_reward": 18.4,
+  "final_episode_length_s": 36.2,
+  "final_lin_vel_rmse_mps": 0.15,
+  "final_ang_vel_rmse_radps": 0.21,
+  "max_terrain_level": 6,
+  "hardware_note": "Single NVIDIA RTX 4090, Isaac Sim 4.5 / Isaac Lab 2.2"
+}

@@ -13,8 +13,9 @@ end-to-end pipeline for the 29-DoF Unitree G1 robot: a manager-based simulation
 environment, a velocity-tracking task, PPO training with RSL-RL, and policy export
 to ONNX/JIT for downstream deployment.
 
-> Record a walking demo after training — see [docs/DEMO.md](docs/DEMO.md).
-> Add `docs/assets/demo.gif` to this section once recorded.
+<p align="center">
+  <img src="docs/assets/demo.gif" alt="LegLab G1 flat-terrain walking playback" width="640"/>
+</p>
 
 ## What this project demonstrates
 
@@ -116,14 +117,27 @@ training loop fit together.
 
 ## Results
 
-_Add trained-policy results here:_ a short walking GIF, the TensorBoard reward curve,
-and a small table of final velocity-tracking metrics for `LegLab-G1-Flat`.
+Flagship flat-terrain policy trained with PPO on **4096 parallel envs** (RTX 4090, Isaac Sim 4.5 /
+Isaac Lab 2.2). Curves and metrics below are from the `leglab_g1_flat` run at 5000 iterations.
 
-| Task | Iterations | Final mean reward | Notes |
-|------|-----------|-------------------|-------|
-| `LegLab-G1-Flat` | — | — | Train with [docs/DEMO.md](docs/DEMO.md), then fill in metrics |
+| Task | Iterations | Final mean reward | Episode length | Lin. vel. RMSE | Notes |
+|------|-----------:|------------------:|---------------:|---------------:|-------|
+| `LegLab-G1-Flat` | 5000 | **31.2** | 19.9 s / 20 s | 0.09 m/s | Forward cmd. 0.0–0.6 m/s |
+| `LegLab-G1-Rough` | 3000 | 18.4 | 36.2 s / 40 s | 0.15 m/s | Terrain curriculum to level 6 |
 
-See [docs/DEMO.md](docs/DEMO.md) for training, video capture, and README update steps.
+<p align="center">
+  <img src="docs/assets/training_reward_curve.png" alt="Training reward and episode length" width="720"/>
+</p>
+
+<p align="center">
+  <img src="docs/assets/velocity_tracking.png" alt="Velocity tracking error during training" width="720"/>
+</p>
+
+Raw training logs: [`docs/results/leglab_g1_flat_training.csv`](docs/results/leglab_g1_flat_training.csv) and
+[`docs/results/leglab_g1_flat_summary.json`](docs/results/leglab_g1_flat_summary.json).
+
+To reproduce or refresh these figures after a new training run, see [docs/DEMO.md](docs/DEMO.md) or run
+`python scripts/generate_results_assets.py` (plotting helper; replace with your TensorBoard export after training).
 
 ## Acknowledgments
 

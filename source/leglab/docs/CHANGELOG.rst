@@ -1,23 +1,13 @@
 Changelog
 ---------
 
-0.1.2
-~~~~~
-
-Changed
-^^^^^^^
-
-* Verified compatibility with Isaac Sim 4.5.0 and Isaac Lab 2.2.0.
-* Updated RSL-RL minimum version check for distributed training (``rsl-rl-lib>=2.3.1``).
-* Refreshed extension metadata and setup classifiers for the 4.5 / 2.2 toolchain.
-
 0.1.1
 ~~~~~
 
 Changed
 ^^^^^^^
 
-* Verified compatibility with Isaac Sim 4.5.0 and Isaac Lab 2.2.0.
+* Verified compatibility with Isaac Sim 4.5.0 and Isaac Lab 2.1.0.
 * Updated RSL-RL minimum version check for distributed training (``rsl-rl-lib>=2.3.1``).
 * Refreshed extension metadata and setup classifiers for the 4.5 toolchain.
 
