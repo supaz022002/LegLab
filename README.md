@@ -13,10 +13,6 @@ end-to-end pipeline for the 29-DoF Unitree G1 robot: a manager-based simulation
 environment, a velocity-tracking task, PPO training with RSL-RL, and policy export
 to ONNX/JIT for downstream deployment.
 
-<p align="center">
-  <img src="docs/assets/demo.gif" alt="LegLab G1 flat-terrain walking playback" width="640"/>
-</p>
-
 ## What this project demonstrates
 
 - **Isaac Lab manager-based RL environments** — scene, observation, action, reward,
@@ -26,7 +22,7 @@ to ONNX/JIT for downstream deployment.
 - **Robot asset pipeline** — Unitree G1 from URDF and meshes through to a simulation-ready
   USD articulation with tuned actuators (see [docs/ASSETS.md](docs/ASSETS.md)).
 - **Training and evaluation tooling** — RSL-RL PPO training, headless and rendered
-  playback, video capture, and ONNX/JIT policy export.
+  playback, and ONNX/JIT policy export.
 - **Custom terrain generators** — slope, rough slope, cobblestone, and noise terrains
   built on Isaac Lab's terrain generator.
 
@@ -136,7 +132,7 @@ Isaac Lab 2.2). Curves and metrics below are from the `leglab_g1_flat` run at 50
 Raw training logs: [`docs/results/leglab_g1_flat_training.csv`](docs/results/leglab_g1_flat_training.csv) and
 [`docs/results/leglab_g1_flat_summary.json`](docs/results/leglab_g1_flat_summary.json).
 
-To reproduce or refresh these figures after a new training run, see [docs/DEMO.md](docs/DEMO.md) or run
+To reproduce or refresh the training figures after a new run, see [docs/DEMO.md](docs/DEMO.md) or run
 `python scripts/generate_results_assets.py` (plotting helper; replace with your TensorBoard export after training).
 
 ## Acknowledgments
